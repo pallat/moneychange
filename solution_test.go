@@ -26,3 +26,15 @@ func TestChange5(t *testing.T) {
 		t.Errorf("expected %#v\nbut got %#v\n", expected, r)
 	}
 }
+
+func TestChange7(t *testing.T) {
+	r := Change(93, 100)
+	expected := map[float64]int{
+		5: 1,
+		2: 1,
+	}
+
+	if !reflect.DeepEqual(r, expected) {
+		t.Errorf("expected %#v\nbut got %#v\n", expected, r)
+	}
+}

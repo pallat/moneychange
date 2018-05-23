@@ -13,7 +13,7 @@ func Change(price float64, paid float64) map[float64]int {
 	for _, bc := range bankcoin {
 		if c/bc >= 1 {
 			r[bc] = int(c / bc)
-			c -= ((c / bc) * bc)
+			c -= (float64(r[bc]) * bc)
 		}
 	}
 
